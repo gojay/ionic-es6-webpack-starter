@@ -34,6 +34,7 @@
     "expose-loader": "^0.6.0",
     "file-loader": "^0.8.1",
     "fs-walk": "0.0.1",
+    "gulp": "^3.9.0",
     "gulp-rename": "^1.2.2",
     "gulp-template": "^3.0.0",
     "html-loader": "^0.2.3",
@@ -50,7 +51,7 @@
   },
   "dependencies": {
     "angular": "^1.4.5",
-    "angular-material-design-lite": "git+https://github.com/jimmyho/angular-material-design-lite.git",
+    "angular-material-design-lite": "git+https://github.com/jadjoubran/angular-material-design-lite.git",
     "ionic-sdk": "^1.0.0",
     "lodash": "^3.9.3",
     "material-design-lite": "^1.0.5",

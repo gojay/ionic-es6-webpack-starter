@@ -17,7 +17,8 @@ module.exports = {
   entry: path.join(libPath, 'index.js'),
   output: {
     path: wwwPath,
-    filename: 'prototype-[hash:6].js'
+    // filename: 'prototype-[hash:6].js'
+    filename: 'app.js'
   },
   module: {
     loaders: [{

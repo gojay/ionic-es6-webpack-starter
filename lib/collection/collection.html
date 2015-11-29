@@ -1,0 +1,41 @@
+<ion-view view-title="{{vm.name}}">
+  <div class="tabs-striped tabs-top tabs-background-positive tabs-color-light">
+    <div class="tabs" ng-style="setTabStyle()">
+      <a class="tab-item" ng-class="{'active':vm.activeTabIndex == 0}" ng-click="vm.goTabIndex(0)">
+        Left
+      </a>
+      <a class="tab-item" ng-class="{'active':vm.activeTabIndex == 1}" ng-click="vm.goTabIndex(1)">
+        Center
+      </a>
+      <a class="tab-item" ng-class="{'active':vm.activeTabIndex == 2}" ng-click="vm.goTabIndex(2)">
+        Right
+      </a>
+    </div>
+  </div>
+  <ion-content class="has-subheader" has-bouncing="false">
+    <ion-slide-box show-pager="false" on-slide-changed="vm.slideHasChanged($index)">
+      <ion-slide slide-swipeable>
+        <ion-scroll delegate-handle="scroll-left" has-bouncing="false" ng-style="vm.getHeight()">
+          <ion-item collection-repeat="item in vm.items.left">
+            {{item}}
+          </ion-item>
+        </ion-scroll>
+      </ion-slide>
+      <ion-slide slide-swipeable>
+        <ion-scroll delegate-handle="scroll-center" ng-style="vm.getHeight()">
+          <ion-item collection-repeat="item in vm.items.center">
+            {{item}}
+          </ion-item>
+        </ion-scroll>
+      </ion-slide>
+      <ion-slide slide-swipeable>
+        <ion-scroll delegate-handle="scroll-right" ng-style="vm.getHeight()">
+          <ion-item collection-repeat="item in vm.items.right">
+            {{item}}
+          </ion-item>
+        </ion-scroll>
+      </ion-slide>
+    </ion-slide-box>
+  </ion-content>
+
+</ion-view>

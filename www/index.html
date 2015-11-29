@@ -4,16 +4,16 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
-  <title>{%=o.htmlWebpackPlugin.options.pkg.title %}</title>
+  <title></title>
   <!-- cordova script (this will be a 404 during development) -->
   <script src="cordova.js"></script>
 </head>
 
 <body ng-app="main">
   <ion-nav-view></ion-nav-view>
-  {% for (var chunk in o.htmlWebpackPlugin.files.chunks) { %}
-  <script src="{%=o.htmlWebpackPlugin.files.chunks[chunk].entry %}"></script>
-  {% } %}
+  
+  <script src="app.js"></script>
+  
 </body>
-<!-- {%= o.htmlWebpackPlugin.options.pkg.name + ' v' + o.htmlWebpackPlugin.options.pkg.version + ' built on ' + new Date() %} -->
+<!-- ionic-webpack-es6-components v1.0.0 built on Mon Nov 30 2015 00:03:00 GMT+0700 (SE Asia Standard Time) -->
 </html>
